@@ -114,6 +114,7 @@ class Main {
 		        }
 		        for(int l = 0; l < s.rows; l++)
 		            s.Decode[l] = 0;
+
 		        s.secondMessage += " : ";
 		        s.secondMessage += s.dekodowanie() ;
 		        s.secondMessage +="\n";

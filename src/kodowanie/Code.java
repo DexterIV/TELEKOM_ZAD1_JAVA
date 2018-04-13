@@ -150,7 +150,6 @@ class Code {
 	    boolean found;
 	    int[] k = new int[2];
 	    int[] x = new int[2];
-	    //string e = "  Wiecej niz 2 bledy!";
 
 	    for(int i = 0; i < n-1; i++)
 	    {
@@ -180,15 +179,17 @@ class Code {
 	{
 	    ASCII[pozycjaBledu] += 1;
 	    ASCII[pozycjaBledu] %= 2;
-	    zmienna++;
+	    zmienna = 1;
 	}
 	private void napraw2Bledy()
 	{
 	        int [] pozycjeBledow = new int[3];
 	        pozycjeBledow = szukaj2Bledy();
 
-	        if((pozycjeBledow[0] == 0 )&& (pozycjeBledow[1] == 0))
-	        	errorMessage = "Za duzo bledow!";
+	        if((pozycjeBledow[0] == 0 )&& (pozycjeBledow[1] == 0)) {
+	        	zmienna = 0;
+				errorMessage += "Za duzo bledow!";
+			}
 	        else {
 				//NAPRAWIANIE
 				naprawBit(pozycjeBledow[0]);
@@ -224,14 +225,11 @@ class Code {
 			napraw1Blad();
 		}
 		int kodZnaku = naASCII();
-		char cos = (char) kodZnaku;
-		if(zmienna == 1)
-		errorMessage +="  Letter "+ cos + "\n";
-		if(zmienna == 3)
-			errorMessage ="Za duzo bledow";
-		return  cos;
+		char aChar = (char) kodZnaku;
+		if(zmienna == 1) {
+			errorMessage += "  Letter " + aChar + "\n";
+			zmienna = 0;
+		}
+		return  aChar;
 	}
-
-
-
 }
