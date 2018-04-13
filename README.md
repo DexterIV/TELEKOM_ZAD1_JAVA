@@ -1,6 +1,6 @@
 # TELEKOM_ZAD1_JAVA
 
-##AUTHORS
+## AUTHORS
 
-###Krzysztof Barden 210139
-###Przemysław Fortuna 210172
+* Krzysztof Barden 210139
+* Przemysław Fortuna 210172
