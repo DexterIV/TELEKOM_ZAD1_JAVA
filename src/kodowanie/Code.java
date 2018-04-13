@@ -66,7 +66,7 @@ class Code {
 	        T[i] = tmp;
 	        znakASCII /= 2;
 
-			if(i == 1) T[0] = 0; //najstarszy bit musi wynosiæ zero
+			if(i == 1) T[0] = 0; //najstarszy bit musi wynosic zero
 	    }
 	}
 
