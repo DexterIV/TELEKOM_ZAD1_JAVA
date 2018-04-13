@@ -20,7 +20,7 @@ class Code {
 	public String secondMessage;
 	public String firstMessage ="";
 	public String errorMessage;
-	int zmienna = 0;
+	private int zmienna = 0;
 
 	public Code()
 	{
@@ -57,7 +57,7 @@ class Code {
 	}
 
 
-	private void ASCIIbin(char znak, int znakASCII)
+	private void ASCIIbin(int znakASCII)
 	{
 		int tmp;
 		for(int i = 7; i != 0; i--)
@@ -71,7 +71,7 @@ class Code {
 	}
 
 
-	private void ASCIIbinPL(char znak, int znakASCII)
+	private void ASCIIbinPL(int znakASCII)
 	{
 		int tmp;
 		int ifOne = 0;
@@ -98,8 +98,8 @@ class Code {
 	{
 
 		//przeksztalcenie na kod ASCII
-		if((int) znak > 0) ASCIIbin(znak, (int) znak);
-		else ASCIIbinPL(znak, (int) znak);
+		if((int) znak > 0) ASCIIbin((int) znak);
+		else ASCIIbinPL((int) znak);
 
 		//obliczanie sumy kontrolnej na podstawie kodu ASCII
 	    mnozenie(T);

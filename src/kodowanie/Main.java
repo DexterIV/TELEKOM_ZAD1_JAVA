@@ -86,7 +86,7 @@ class Main {
 	 			System.out.println("BLADD PRZY OTWIERANIU PLIKU!");
 	 			System.exit(1);}
 		
-		String wiadomosc_in="";
+		String wiadomosc_in;
 
 		PrintWriter zapiszchar = null;
 
@@ -97,13 +97,14 @@ class Main {
 			System.exit(1);}
 		try {
 
-			for(int i = 0; i < wiadomosc.length(); i++) 
+			StringBuilder s2Builder = new StringBuilder();
+			for(int i = 0; i < wiadomosc.length(); i++)
 		    {
 				wiadomosc_in = odczyt.readLine();
 				character = Integer.parseInt(wiadomosc_in.substring(0,7),2);
-                s2 += (char)character;
+                s2Builder.append((char) character);
                 character = Integer.parseInt(wiadomosc_in.substring(8,15),2);
-				s2 += (char)character;
+				s2Builder.append((char) character);
 
 		        for(int j = 0; j < s.n; j++)
 		        {
@@ -117,7 +118,8 @@ class Main {
 		        s.secondMessage += s.dekodowanie() ;
 		        s.secondMessage +="\n";
 		    }
-			}
+			s2 = s2Builder.toString();
+		}
 		catch(IOException e) {
 			System.out.println("BLAD PRZY WCZYTYWANIU Z PLIKU!");
  			System.exit(2);}
