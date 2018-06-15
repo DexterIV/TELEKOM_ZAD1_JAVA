@@ -4,3 +4,6 @@
 
 * Krzysztof Barden 210139
 * Przemysław Fortuna 210172
+
+
+Hamming code, encoding, decoding
